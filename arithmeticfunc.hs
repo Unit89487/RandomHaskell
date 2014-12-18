@@ -14,5 +14,8 @@ hadsTheoremCubic a b c = (c^3 - b^3) - (b^3 - a^3) --For the cubic case, does th
 
 quickString a = a ++ " has been quick stringed."
 
+--a perfect number is a number whose divisors sum to the number. So you'd have to find the divisors. I'm not equipped yet, I don't think,
+--to do that task. Of finding divisors. I'd have to add stuff to lists.. 
+--I can add single elements to lists. How do I get a divisor? How do I find a divisor? The math part? Just divide by every number from 
+--a/2 down to 2. Then what? Then... then... Add 'them' to a list. Them? How about trying to add one. 
 
---
