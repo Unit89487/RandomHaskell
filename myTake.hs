@@ -22,3 +22,17 @@ myTake num list = if null list || num <= 0
 --where to go from there. 
 
 --lowestTerms numerator denominator = 
+
+--Try to write a function that has a side effect.
+--What are side effects? A side effect introduces a dependency between the global state of a system and the behavior of a function. Let's step
+--away from Haskell for a moment and consider an imperative programming language. Consider a function that reads and returns the value of a
+--global variable. If some other code can modify that global variable, then the result of a particular application of our function depends
+--depends on the current value of that global variable. 
+--So, to write a function that has a side, effect, I'd need to create a global variable 
+
+let a = 10
+
+
+
+--where b hasn't been set yet, and is potentially going to be set. If the value of b, and through extension the value of a, can be modified
+--by some other code, then the result of a particular application of our function sideFX depends on the current value of the global variable b. 
