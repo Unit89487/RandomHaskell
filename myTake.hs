@@ -30,7 +30,6 @@ myTake num list = if null list || num <= 0
 --depends on the current value of that global variable. 
 --So, to write a function that has a side, effect, I'd need to create a global variable 
 
-let a = 10
 
 
 
