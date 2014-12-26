@@ -34,8 +34,8 @@ factorial a = if a >= 1
 --Do we really need to understand recursion in terms of 'problem solving'? It's a principle. It's a process. It doesn't necessarily need
 --to be directed. Or maybe it does. What's another mathematical operation? Subtracting by n. 
 
-subtractBy a n = if a not null 
-			     then a - subtractBy (a - n)
+subtractBy a n = if a > -10000
+			     then a - subtractBy (a - n) + 10
 			     else a 
 
 
@@ -46,5 +46,17 @@ subtractBy a n = if a not null
 --subtractBy[91] 
 
 --So what is the result of 100 and 3? 
+--It might not even load module, since I don't know if a Num value can be compared against the expression 'not null.' 
+--Let's say it did load module. 100 isn't null. Predicate True. Then 100 - [97 not null -> then 97 - [94 not null -> then 94 - [91 not null -> then  91 - ]]]
+--91 - ]]]
+--Whatever it does. It doesn't end. Because even when a starts getting negative. Below zero, it won't be null. So the loop continues. 
+--What about if I change the predicate to a > 0? 
+--
+--It's infinite!! Haskell can't load module, and gives the error "cannot construct the infinite type: a ~ a -> a"
+
+
+
+
+
 
 
