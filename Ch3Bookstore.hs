@@ -3,7 +3,7 @@
 data BookInfo = Book Int String [String]
 			    deriving (Show)
 
---BookInfo is called the name, and Book is called the 'data constructor' 
+--BookInfo is called the data type name, and Book is called the 'data constructor' 
 
 --The BookInfo phrase after the 'data' keyword is the same of our new data type. Which by the way has the same structure as a 3-tuple of
 --type (Int, String, [String])
@@ -19,7 +19,6 @@ data MagazineInfo = Magazine Int String [String]
 --Here we've created a data type with an identical structure to that of BookInfo, but since it is known by a different type constructor,
 --or name, Haskell will treat them as two entirely separate types that are not at all interchangeable, regardless of their identical structure.
 --
-
 
 
 
@@ -49,4 +48,21 @@ data CitizenInfo = Citizen Int String Int String Int Float ([Int], String)
 --divided by number of elections since eligible to vote, and ([Int], String) is amount of money spent in last local election cycle, and registered party
 
 myCitizen = Citizen 8 "Kevin" 29 "Sidmore" 3 (19/29) ([20000, 300000, 300000], "Repub")
+
+data ElectionInfo = Election Int String [(String, String, Int)]
+--Where Int is the district. String is the state, [(String, String, Int)] is the candidate's name, their party, and their disclosed funding
+
+--
+
+
+data BookReview = BookReview BookInfo CustomerID String
+
+--In BookReview, I'm noticing a couple of things. First, that the type constructor and the data constructor have the same name.
+
+data Voter = Voter CitizenInfo StateInfo ElectionInfo 
+
+
+
+
+
 
