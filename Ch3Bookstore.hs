@@ -66,3 +66,8 @@ data Voter = Voter CitizenInfo StateInfo ElectionInfo
 
 
 
+
+
+
+
+
