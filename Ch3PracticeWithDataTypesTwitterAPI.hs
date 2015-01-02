@@ -54,7 +54,7 @@ somePlaces = Places "New York" (19193.22, 292932.200, -19292.3939, -29293.39) "U
 
 x = 10
 
-
+someResultFromTwitterAPI = TwitterAPI someTweet someUserData someEntities somePlaces deriving (Show)
 
 
 
