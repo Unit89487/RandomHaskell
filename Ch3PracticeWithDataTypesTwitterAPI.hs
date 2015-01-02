@@ -3,7 +3,9 @@
 --to the 'data' keyword, and this expression is then bound to another, distinct name, the value constructor, and the fundamental, primitive
 --data types that collect to compose the new data type. Here I'll define a data type called Twitter API return
 
+data IntWithAStringData = IntWithAString Int String 
 
+fiveAndHa = IntWithAString 5 "Ha"
 
 data ResultsFromTwitterAPI = TwitterAPI TweetData UsersData EntitiesData PlacesData 
 
@@ -23,35 +25,34 @@ data ResultsFromTwitterAPI = TwitterAPI TweetData UsersData EntitiesData PlacesD
 --If retweeted-status returns another Tweet object. How do I represent that in here? Do I put "TweetData"? Isn't that a recursive definition? Then that original
 --Tweet is going to have a TweetData value of... itself? No, it will be null because that field will be empty. 
 
-data TweetData = Tweet Int Int (Float, Float) ((Int, Int, Int), (Int, Int)) String 
+data TweetData = Tweet Int Int (Float, Float) ((Int, Int, Int), (Int, Int)) String deriving (Show)
 
 
 --created_at (when was account created? str), default_profile_image (egg? Bool), description ("The user-defined UTF8 string describing thier account"),
 --favourites_count (int), followers_count (int), friends_count (aka followees, int), ID (64 bit signed int will be safe), lang (str), location (str),
 --name (str), profile_image_URL_https (string), statuses_count (the number of tweets, incld retweets), time_zone (str). That's a lot of user data that's available.
 --There are 43 total properties on the Users object. 
-data UsersData = Users String Bool String Int Int Int Int String String String Int String 
+data UsersData = Users String Bool String Int Int Int Int String String String Int String deriving(Show)
 
 
 --[strings] should be [objects]. array of hashtag objects, array of media objects, array of urls
-data EntitiesData = Entities [String] [String] [String]
+data EntitiesData = Entities [String] [String] [String] 
+	 deriving (Show)
 
 
 --String should be Object, (Float, Float, Float, Float) is the bounding box of coordinates of a place, country, name, short name, type, URL
-data PlacesData =  Places String (Float, Float, Float, Float) String String String String String 
+data PlacesData =  Places String (Float, Float, Float, Float) String String String String String deriving (Show)
 
-someonesTweet = Tweet 10 14 (1.4, 30.3) ((12, 31, 2014) (9, 40) "Tweet Data"
+someTweet = Tweet 10 14 (1.4, 30.3) ((12, 31, 2014), (9, 40)) "Tweet Data"
 
-someonesUserData = Users "Long time ago" True "Reader, big fan of space telescopes" 1030 193 105 92929392 English Kimbo "https://blah.com" 1103 "Western"
+someUserData = Users "Long time ago" True "Reader, big fan of space telescopes" 1030 193 105 92929392 "English" "Kimbo" "https://blah.com" 1103 "Western"
 
-someonesEntitiesData = Entities ["fun", "lawll", "colormeshocked", "howisthispossible", "thefappening", "ElonBomb", "Muskegee"] ["pic", "pic", "pic"] ["http://isthisevenright.com", "http://isthistheway.com", "http://justcheck.com"]
+someEntities = Entities ["fun", "lawll", "colormeshocked", "howisthispossible", "thefappening", "ElonBomb", "Muskegee"] ["pic", "pic", "pic"] ["http://isthisevenright.com", "http://isthistheway.com", "http://justcheck.com"]
 
-someonesPlacesData = Places "New York" (19193.22, 292932.200, -19292.3939, -29293.39) "USA" "NYC" "NY" "Megapolis" "https://bigapp.com"
-
-
+somePlaces = Places "New York" (19193.22, 292932.200, -19292.3939, -29293.39) "USA" "NYC" "NY" "Megapolis" "https://bigapp.com"
 
 
-
+x = 10
 
 
 
