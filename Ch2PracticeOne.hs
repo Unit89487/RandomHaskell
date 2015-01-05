@@ -13,8 +13,21 @@ isFalse = True && False
 
 
 
+isFairOdd fair = if odd fair
+				 then print "The fair is odd!"
+				 else print "The fair is even!"
+
+
+isFirstElementInTupleOdd tuple = if odd (fst tuple) 
+								 then print "The first element of this tuple is odd! I know because I used a function with an if condition... and it's getting too long." 
+								 else print "The first element is actually even. Cause it aint odd."
+
+
+
+
 --types to use: list, tuple, boolean, string, number, float, 
 --Prelude functions to try and use: compare, odd, head, tail, drop,    fst, snd 
 --logical operators to use  && && ||   == 
 --principles (logical principles? programming principles? mathematical principles?) recursion 
 
+ 	
