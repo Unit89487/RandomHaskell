@@ -24,6 +24,18 @@ isFirstElementInTupleOdd tuple = if odd (fst tuple)
 
 
 
+isFirstElementGreaterThanSecond tuple = if (fst tuple) > (snd tuple)
+										then print "Yea! The first element is greater than the second element."
+										else print "Nope. The first element is not greater than the second element."
+
+isFirstElementGreaterThanTheSecondOrGreaterThanARandomNum tuple integer = if (fst tuple) > (snd tuple) || (fst tuple) > integer
+																		  then print "The long a** condition of the function is true!"
+																		  else print "Apparently it's not!"
+isFirstElementGreaterThanSecondAndGreaterThanARandomNum tuple integer = if (fst tuple) > (snd tuple) && (fst tuple) > integer
+																		then (fst tuple) + (snd tuple)
+																		else (fst tuple) - (snd tuple)
+
+																																			 
 
 --types to use: list, tuple, boolean, string, number, float, 
 --Prelude functions to try and use: compare, odd, head, tail, drop,    fst, snd 
