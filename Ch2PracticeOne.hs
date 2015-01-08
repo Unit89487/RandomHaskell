@@ -52,3 +52,15 @@ proximityFunction proximityInFeet areFacingPerson = if proximityInFeet < 6 && ar
 --principles (logical principles? programming principles? mathematical principles?) recursion 
 
  	
+isFlooded isFlooded = if isFlooded == isTrue
+				      then print "Something is flooded out there!"
+				      else print "Apparently there's nothing flooded."
+
+isFrozen isIce inches = if (isIce == True) && inches > 0
+			  			then print "There's ice out there!"
+			  			else print "You're good. No ice!"
+
+
+isTraffic isTraffic road = if isTraffic == True
+						   then print "There is traffic on .. I tried to put the string concat operator + here, next to the varialbe road. But error."
+						   else print "No traffic!"
