@@ -35,7 +35,16 @@ isFirstElementGreaterThanSecondAndGreaterThanARandomNum tuple integer = if (fst 
 																		then (fst tuple) + (snd tuple)
 																		else (fst tuple) - (snd tuple)
 
-																																			 
+boldnessFunction timeWaited resultsGot = if timeWaited < 3
+										 then resultsGot * 10
+										 else resultsGot * 0 
+
+proximityFunction proximityInFeet areFacingPerson = if proximityInFeet < 6 && areFacingPerson 
+												    then print "Yea, you close."
+												    else print "You're not that close."
+
+
+
 
 --types to use: list, tuple, boolean, string, number, float, 
 --Prelude functions to try and use: compare, odd, head, tail, drop,    fst, snd 
