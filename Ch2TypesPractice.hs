@@ -17,9 +17,17 @@ keepTheBoolComing = (False || True) && True && True
 georgeBoole = (False || False || True) && False 
 kaBool = False && True && True && True && True && True && True 
  
+
+--Int
+
+--Integer
+
+--Double
+
 --List
 
 listOfChars = ['e','f','g','h','i']
+listOfStrings = [['a','b','c'], ['d','e','f'], ['h','e','g','f'], ['s','o','m','e'], ['s','t','r','i','n','g'], ['h','e','r','e']]
 
 
 
