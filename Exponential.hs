@@ -13,3 +13,6 @@ potentiate a b = if b > 0 then a * potentiate a (b - 1) else a
 --2 *  potentiate 2 2
 --Step 2
 --2 * [2 * 2 * 1]
+
+--Is there a way to do it without if, then, else. That feels kind of OOP-like. This is FP! B! 
+
