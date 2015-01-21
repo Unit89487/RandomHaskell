@@ -10,9 +10,6 @@ yetAnotherTuple = (19000, "Huevos Rancheros")
 isTrue = True || False
 isFalse = True && False 
 
-
-
-
 isFairOdd fair = if odd fair
 				 then print "The fair is odd!"
 				 else print "The fair is even!"
